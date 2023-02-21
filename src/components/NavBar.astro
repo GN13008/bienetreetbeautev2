@@ -1,0 +1,181 @@
+---
+export interface Props {
+  currentPage: string;
+  //   body: string;
+  //   href: string;
+}
+
+const { currentPage } = Astro.props;
+// const { href, title, body } = Astro.props;
+
+const styleCurrentPage = "selected";
+const styleOtherPage = "";
+---
+
+<nav class="navbar">
+  <div class="display-desktop">
+    <div class="nav-content">
+      <div class="logo">
+        <ul>
+          <li
+            class={currentPage == "tarifs" ? styleCurrentPage : styleOtherPage}
+          >
+            <a href="/"> Bien être et beauté</a>
+          </li>
+        </ul>
+      </div>
+      <div class="menu">
+        <ul>
+          <li class={currentPage == "home" ? styleCurrentPage : styleOtherPage}>
+            <a href="/home"> Phytomer</a>
+          </li>
+          <li
+            class={currentPage == "tarifs" ? styleCurrentPage : styleOtherPage}
+          >
+            <a href="/tarifs"> Tarifs</a>
+          </li>
+        </ul>
+      </div>
+      <div class="contact">
+        <ul>
+          <li
+            class={currentPage == "contact" ? styleCurrentPage : styleOtherPage}
+          >
+            <a href="/contact"> Me contacter</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>
+<div class="display-phone">
+  <div class="nav-content">
+    <div class="logo">
+      <ul>
+        <li><a href="/">Bien être et beauté</a></li>
+      </ul>
+    </div>
+    <div class="dropdown">
+      Menu
+      <div class="dropdown-content">
+        <div class="menu">
+          <ul>
+            <li><a href="">Phytomer</a></li>
+            <li><a href="">Soins</a></li>
+            <li><a href="">LPG</a></li>
+            <li><a href="">Produits</a></li>
+            <li><a href="/tarifs">Tarifs</a></li>
+            <li><a href="">Me contacter</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  nav {
+    background-color: #fff;
+    /* // position: fixed;
+    // top: 0px;
+    // width: 100%;
+    // z-index: 10000;
+    // transition: all .5s; */
+    border-bottom: 1px solid #eee;
+  }
+
+  nav .nav-content {
+    display: flex;
+    justify-content: space-between;
+    padding: 16px 32px;
+    font-weight: 500;
+    font-size: 14px;
+    text-transform: uppercase;
+  }
+
+  nav ul {
+    display: block;
+    text-align: center;
+  }
+
+  nav li {
+    display: inline-block;
+    color: #273848;
+    margin-right: 10px;
+    letter-spacing: 0.02em;
+    background: linear-gradient(
+        to top,
+        #273848 0%,
+        #273848 7%,
+        transparent 7.01%
+      )
+      no-repeat;
+    background-size: 0 100%;
+    transition: background-size 0.4s;
+  }
+
+  nav li:hover {
+    background-size: 100% 100%;
+  }
+
+  nav li.selected {
+    background-size: 100% 100%;
+  }
+
+  .display-phone {
+    display: none;
+  }
+
+  .display-phone .nav-content {
+    display: flex;
+    justify-content: space-between;
+    padding: 16px 32px;
+    font-weight: 500;
+    font-size: 14px;
+    text-transform: uppercase;
+  }
+
+  .display-phone ul {
+    display: block;
+    text-align: center;
+  }
+
+  .display-phone li {
+    display: inline-block;
+    color: #273848;
+    margin-right: 10px;
+    letter-spacing: 0.02em;
+  }
+
+  .dropdown {
+    display: inline-block;
+    position: relative;
+  }
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    border-radius: 8px;
+    top: 30px;
+    right: -5px;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    padding: 12px 16px;
+    z-index: 1;
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+  /* Display on Phone */
+  @media (max-width: 768px) {
+    .display-desktop {
+      display: none;
+    }
+    .display-phone {
+      display: block;
+    }
+  }
+</style>
