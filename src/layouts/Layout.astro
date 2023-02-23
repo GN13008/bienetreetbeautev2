@@ -27,15 +27,11 @@ const { title, page } = Astro.props;
     <footer class="p-4 bg-gray-900 shadow md:px-6 md:py-8">
       <div class="flex items-center justify-around">
         <ul class="flex flex-wrap items-center text-sm text-gray-400">
-          <a href="{{ route('home') }}" class="mr-4 hover:underline md:mr-6"
-            >L'institut</a
-          >
-          <a href="{{ route('tarifs') }}" class="mr-4 hover:underline md:mr-6"
-            >Les tarifs</a
-          >
-          <a href="{{ route('contact') }}" class="mr-4 hover:underline md:mr-6"
-            >Me contacter</a
-          >
+          <a href="/" class="mr-4 hover:underline md:mr-6">L'institut</a>
+          <a href="/tarifs" class="mr-4 hover:underline md:mr-6">Les tarifs</a>
+          <a href="/contact" class="mr-4 hover:underline md:mr-6">
+            Me contacter
+          </a>
         </ul>
         <div class="grid grid-flow-col gap-4 text-gray-50">
           <a

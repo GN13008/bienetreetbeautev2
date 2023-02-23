@@ -1,82 +1,59 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Card from "../components/Card.astro";
 ---
 
-<Layout title="Welcome to Astro." page="">
+<Layout title="Bien être et beauté" page="home">
   <main>
-    <h1>Welcome to <span class="text-gradient">Astro</span></h1>
-    <p class="instructions">
-      To get started, open the directory <code>src/pages</code> in your project.<br
-      />
-      <strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
-    </p>
-    <ul role="list" class="link-card-grid">
-      <Card
-        href="https://docs.astro.build/"
-        title="Documentation"
-        body="Learn how Astro works and explore the official API docs."
-      />
-      <Card
-        href="https://astro.build/integrations/"
-        title="Integrations"
-        body="Supercharge your project with new frameworks and libraries."
-      />
-      <Card
-        href="https://astro.build/themes/"
-        title="Themes"
-        body="Explore a galaxy of community-built starter themes."
-      />
-      <Card
-        href="https://astro.build/chat/"
-        title="Community"
-        body="Come say hi to our amazing Discord community. ❤️"
-      />
-    </ul>
+    <div
+      class="min-h-screen bg-cover bg-bottom"
+      style="background-image: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.8)), url('/assets/etang_thau.png')"
+    >
+      <div class="min-h-screen flex justify-center items-center text-center">
+        <div class="max-w-4xl pb-24">
+          <h1 class="mb-5 text-5xl font-bold text-gray-200">
+            Bienvenue chez Bien Etre et Beauté
+          </h1>
+          <p class="mb-5 text-xl text-gray-200">
+            Au cœur d’un petit village au bord de l'étang de thau, dans les
+            remparts de Loupian, Florence vous ouvre ses portes et vous dévoile
+            son havre de paix. Un espace cocooning qui vous propose de vivre une
+            expérience poly sensorielle.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!-- Présentation de captain John -->
+    <section class="text-gray-600 body-font">
+      <div class="h-4/5 container px-5 pt-12 pb-24 mx-auto">
+        <div class="flex justify-center pb-12">
+          <h1 class="text-3xl text-center">Bien etre et beauté</h1>
+        </div>
+        <div class="grid grid-cols-1 lg:grid-cols-2">
+          <div class="">
+            <div class="flex justify-around">
+              <img
+                src="/assets/home.png"
+                alt=""
+                class="rounded-md h-60 lg:h-96"
+              />
+            </div>
+            <p class="text-center mx-12 mt-6">Institut Bien être et beauté</p>
+          </div>
+          <div>
+            <p class="text-sm lg:text-lg mt-4 mb-4">
+              Au cœur d’un petit village au bord de l'étang de thau, dans les
+              remparts de Loupian, Florence vous ouvre ses portes et vous
+              dévoile son havre de paix. Un espace cocooning qui vous propose de
+              vivre une expérience poly sensorielle.
+            </p>
+            <p class="text-sm lg:text-lg mt-4 mb-4">
+              Proche de montpellier, non loin de sète, l'institut est situé à
+              Loupian. Un petit village entre bouzigue et Mèze.
+            </p>
+            <br />
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 </Layout>
-
-<style>
-  main {
-    margin: auto;
-    padding: 1.5rem;
-    max-width: 60ch;
-  }
-  h1 {
-    font-size: 3rem;
-    font-weight: 800;
-    margin: 0;
-  }
-  .text-gradient {
-    background-image: var(--accent-gradient);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-size: 400%;
-    background-position: 0%;
-  }
-  .instructions {
-    line-height: 1.6;
-    margin: 1rem 0;
-    border: 1px solid rgba(var(--accent), 25%);
-    background-color: white;
-    padding: 1rem;
-    border-radius: 0.4rem;
-  }
-  .instructions code {
-    font-size: 0.875em;
-    font-weight: bold;
-    background: rgba(var(--accent), 12%);
-    color: rgb(var(--accent));
-    border-radius: 4px;
-    padding: 0.3em 0.45em;
-  }
-  .instructions strong {
-    color: rgb(var(--accent));
-  }
-  .link-card-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-    gap: 1rem;
-    padding: 0;
-  }
-</style>
