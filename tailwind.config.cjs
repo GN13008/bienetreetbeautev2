@@ -26,7 +26,7 @@ module.exports = {
       },
       fontFamily: {
         sans: ["Old Standard TT", "Graphik", "sans-serif"],
-        //     serif: ["Merriweather", "serif"],
+        serif: ["Merriweather", "serif"],
       },
       // fontFamily: {
       //     sans: ['Nunito', ...defaultTheme.fontFamily.sans],

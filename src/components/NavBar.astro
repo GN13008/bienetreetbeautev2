@@ -17,18 +17,13 @@ const styleOtherPage = "";
     <div class="nav-content">
       <div class="logo">
         <ul>
-          <li
-            class={currentPage == "tarifs" ? styleCurrentPage : styleOtherPage}
-          >
+          <li class={currentPage == "" ? styleCurrentPage : styleOtherPage}>
             <a href="/"> Bien être et beauté</a>
           </li>
         </ul>
       </div>
       <div class="menu">
         <ul>
-          <li class={currentPage == "home" ? styleCurrentPage : styleOtherPage}>
-            <a href="/home"> Phytomer</a>
-          </li>
           <li
             class={currentPage == "tarifs" ? styleCurrentPage : styleOtherPage}
           >
