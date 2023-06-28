@@ -21,37 +21,30 @@ import Layout from "../layouts/Layout.astro";
         </div>
       </div>
     </div>
-    <!-- Présentation de captain John -->
-    <section class="text-gray-600 body-font">
-      <div class="h-4/5 container px-5 pt-12 pb-24 mx-auto">
-        <div class="flex justify-center pb-12">
-          <h1 class="text-3xl text-center">Bien etre et beauté</h1>
-        </div>
-        <div class="grid grid-cols-1 lg:grid-cols-2">
-          <div class="">
-            <div class="flex justify-around">
-              <img
-                src="/assets/home.png"
-                alt=""
-                class="rounded-md h-60 lg:h-96"
-              />
-            </div>
-            <p class="text-center mx-12 mt-6">Institut Bien être et beauté</p>
-          </div>
-          <div>
-            <p class="text-sm lg:text-lg mt-4 mb-4">
-              Au cœur d’un petit village au bord de l'étang de thau, dans les
-              remparts de Loupian, Florence vous ouvre ses portes et vous
-              dévoile son havre de paix. Un espace cocooning qui vous propose de
-              vivre une expérience poly sensorielle.
-            </p>
-            <p class="text-sm lg:text-lg mt-4 mb-4">
-              Prochee de montpellier, non loin de sète, l'institut est situé à
-              Loupian. Un petit village entre bouzigue et Mèze.
-            </p>
-          </div>
+    <div
+      class="relative w-full flex justify-center items-center text-center min-h-screen overflow-hidden"
+    >
+      <div
+        class="absolute top-0 left-3/4 w-full h-full flex justify-center items-center"
+      >
+        <div
+          class="w-full h-2/3 bg-contain opacity-25"
+          style="background-image: url('/assets/fleur.png')"
+        >
         </div>
       </div>
-    </section>
+      <div class="absolute max-w-xl pb-24">
+        <p class="mb-5 text-xl">
+          Au cœur d’un petit village au bord de l'étang de thau, dans les
+          remparts de Loupian, Florence vous ouvre ses portes et vous dévoile
+          son havre de paix. Un espace cocooning qui vous propose de vivre une
+          expérience poly sensorielle.
+        </p>
+        <p class="mb-5 text-xl">
+          Prochee de montpellier, non loin de sète, l'institut est situé à
+          Loupian. Un petit village entre bouzigue et Mèze.
+        </p>
+      </div>
+    </div>
   </main>
 </Layout>
